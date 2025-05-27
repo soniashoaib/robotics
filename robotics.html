@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop Hub</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+
+  <h1>UWCSEA Dover Robotics</h1>
+
+  <nav>
+    <a href="#" onclick="showSection('cad')">CAD</a>
+    <a href="#" onclick="showSection('coding')">Coding</a>
+    <a href="#" onclick="showSection('tools')">Power Tools</a>
+    <a href="#" onclick="showSection('safety')">Safety</a>
+    <a href="#" onclick="showSection('other')">Other</a>
+  </nav>
+
+  <main>
+    <section id="cad" class="tab-section">
+      <h2>CAD (Computer-Aided Design)</h2>
+      <p>CAD is used to create detailed digital models. We use Fusion 360 to visualize and simulate designs before building.</p>
+      <img src="https://www.3dcaddcentre.com/wp-content/uploads/2020/10/fusion-360-1-scaled.jpg" alt="CAD model" class="cad-image">
+      <div style="height: 5rem;"></div>
+    </section>
+
+    <section id="coding" class="tab-section" style="display: none;">
+      <h2>Coding</h2>
+      <p>We program using Python to control our robots, from motors to sensors.</p>
+      <div style="height: 5rem;"></div>
+    </section>
+
+    <section id="tools" class="tab-section" style="display: none;">
+      <h2>Power Tool Uses</h2>
+      <p>We use drills, saws, and soldering irons with care and training to construct our robots.</p>
+      <div style="height: 5rem;"></div>
+    </section>
+
+    <section id="safety" class="tab-section" style="display: none;">
+      <h2>Safety</h2>
+      <p>Always wear goggles and get supervision before using tools. Safety is a priority.</p>
+    </section>
+
+    <section id="other" class="tab-section" style="display: none;">
+      <h2>Other</h2>
+      <p>This section includes challenges, special events, and fun builds.</p>
+     
+      <div style="height: 5rem;"></div>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.tab-section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

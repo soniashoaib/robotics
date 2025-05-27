@@ -1,0 +1,198 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Inter:wght@400;600&display=swap');
+
+/* === Base Styles === */
+body {
+  background: linear-gradient(to right, #ccffd8 0%, #cffffb 30%, #cffffb 70%, #ccffd8 100%);
+  color: #222;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+main {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2.5rem 3rem 6rem 3rem;
+  background-color: #ffffff;
+  box-shadow: none;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 2rem auto 2.5rem auto;
+  font-weight: 700;
+  color: #6783df;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+
+h1:hover ~ main {
+  transform: scale(1.02);
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #9daefa;
+  padding-bottom: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(90deg,#5ece9f, #436fff);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2:hover {
+  transform: none;
+}
+
+
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg,#5ece9f, #436fff);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 8px 8px;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #4466aa;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #4466aa;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 8px white;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.cad-image {
+  display: block;
+  max-width: 300px;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  float: left;
+  clear: both;
+}
+
+ul {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.note {
+  background: #fffbe6;
+  border-left: 4px solid #f5c518;
+  padding: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Scroll-triggered fade-in */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+}
